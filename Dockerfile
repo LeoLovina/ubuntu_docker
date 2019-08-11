@@ -6,3 +6,4 @@ RUN apt-get update && apt-get install -y sudo
 RUN apt-get install -y vim
 RUN apt install -y ufw 
 RUN apt-get install -y nginx
+CMD service nginx start && tail -F /var/log/nginx/error.log
